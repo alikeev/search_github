@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="inner__header">
+                <a class="header__logo__link" href=""> <span class="header__logo__title">
+                        <img class="header__logo" src="img/logo.png" alt="logo"> Github Users
+                    </span></a>
+
+            </div>
+            <input type="text" class="search" id="search">
+            <button id="toggle" type="button">Search</button>
+
+            <select name="git_users" id="select">
+                <option value="repositories">Repositories</option>
+                <option value="joined">Joined</option>
+                <option value="followers">Followers</option>
+            </select>
+            <select name="git_order" id="order">
+                <option value="desc">desc</option>
+                <option value="asc">asc</option>
+
+            </select>
+            <input type="number" class="count" id="count">
+            <div class="total"></div>
+            <div id="result" class="result">
+            </div>
+
+            <input type="text" class="page" id="page">
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
