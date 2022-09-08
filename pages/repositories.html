@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Repositories</title>
+	<link rel="shortcut icon" href="../assets/icons/gitlogo.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+	<div class="container">
+		<header class="header">
+			<div class="header-container _container">
+				<a href="../index.html"> <img class="header-logo" src="../assets/icons/github.svg" alt="logo" /></a>
+				<nav id="main-nav" class="button-container">
+					<button class="_button active">
+						<a href="../index.html">Поиск</a>
+					</button>
+					<button class="_button">
+						<a href="./favorities.html">Избранное</a>
+					</button>
+				</nav>
+			</div>
+		</header>
+		<main id="main-page" class="main-container">
+			<section class="main-content _container">
+				<div class="user-title">
+					<h1>Информация о пользователе</h1>
+				</div>
+				<div id="user-info" class="users _container"></div>
+				<div class="repositories-title">
+					<h2>Репозитории</h2>
+				</div>
+				<div id="repositories" class="repositories-list"></div>
+			</section>
+		</main>
+	</div>
+	<script src="../script.js"></script>
+	<script src="../repositories.js"></script>
+</body>
+
+</html>
