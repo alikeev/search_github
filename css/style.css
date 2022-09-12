@@ -472,6 +472,17 @@ body {
 	.pagination-visible {
 		width: 90%;
 	}
+
+	.wrapper-info button {
+		width: auto;
+
+	}
+
+	.rep_btn {
+		margin-top: 0px;
+		padding: 0px;
+		margin-left: 30px;
+	}
 }
 
 @media (max-width: 767.98px) {
@@ -489,11 +500,13 @@ body {
 
 	.select-container {
 		max-width: 300px;
-		justify-content: space-around;
+
 	}
+
 
 	.select {
 		padding: 7px 20px 7px 10px;
+		margin-right: 10px;
 	}
 
 	.per-page-input {
@@ -516,9 +529,20 @@ body {
 	.pagination-visible {
 		width: 85%;
 	}
+
+	.wrapper-info button {
+		width: auto;
+
+	}
+
+	.rep_btn {
+		margin-top: 0px;
+		padding: 0px;
+		margin-left: 30px;
+	}
 }
 
-@media (max-width: 479.98px) {
+@media (max-width: 400px) {
 	.input-container {
 		width: 300px;
 	}
@@ -577,7 +601,14 @@ body {
 	}
 
 	.wrapper-info button {
-		width: 110px;
+		width: auto;
+
+	}
+
+	.rep_btn {
+		margin-top: 0px;
+		padding: 0px;
+		margin-left: 30px;
 	}
 
 	.pagination-visible {

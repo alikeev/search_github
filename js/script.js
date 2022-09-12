@@ -1,5 +1,4 @@
 const gitBackURL = 'https://api.github.com/search/users'
-const gitRandomUsers = 'https://api.github.com/users?&per_page=5'
 const searchInput = document.getElementById('search-input')
 const searchButton = document.getElementById('button')
 const perPageInput = document.getElementById('count')
@@ -92,7 +91,7 @@ const nextPage = () => {
 	}
 	getData()
 }
-// loader
+// Загрузка
 const loader = () => {
 	let loader = `<div class="showbox">
   <div class="loader">
@@ -103,7 +102,37 @@ const loader = () => {
 </div>`
 	userList.innerHTML = loader
 }
-// get Users
+
+// вывод пользователя 
+fetch('https://api.github.com/users?&per_page=4').then(res => res.json())
+	.then((data) => data.map((item, id) => {
+		console.log(item);
+		document.querySelector('.result').innerHTML += `
+		<div class="user-container">
+		<div class="user-data">
+		<div class="avatar-wrapper">
+		<img class="avatar" src=${item.avatar_url}/>
+		<div class="wrapper-info">
+		<p>${item.login}</p>
+		<a href=${item.html_url}>link to github</a>
+		</div>
+		</div>
+		<div class="wrapper-info btn">
+		<button  class="_button star"  onclick="addToFavorities(event)" data-user ='${JSON.stringify(
+			item.login,
+		)}' >+</button>
+		<button class="rep_btn" onclick="showRepositories(event)" data-repos ='${JSON.stringify(
+			item.login,
+		)}'><a href="./pages/repositories.html">
+		<img src="assets/icons/gitlogo.png" >
+		</a></button>
+		</div>
+		</div>
+		</div> <br>`
+	}))
+
+
+// вывод пользователя 
 const getData = async () => {
 	if (inputValue.trim() === '') {
 		alert('Type user name to search!')
@@ -133,7 +162,7 @@ const getData = async () => {
 		pagination.className = 'hidden'
 	}
 }
-// add to favorities
+// репозитории
 const addToFavorities = (event) => {
 	let starButton = document.querySelectorAll('.star')
 	let currentUser = JSON.parse(event.currentTarget.dataset.user)
@@ -150,7 +179,7 @@ const addToFavorities = (event) => {
 		})
 	}
 }
-// show user repositories
+// репозитории
 const showRepositories = (event) => {
 	let currentUser = JSON.parse(event.currentTarget.dataset.repos)
 	localStorage.setItem('userRepositories', JSON.stringify(currentUser))
